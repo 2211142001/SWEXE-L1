@@ -29,7 +29,7 @@ class BooksController < ApplicationController
 
   def update
     book = Book.find(params[:id])
-    book.update(title: params[:book][:title], author: params[:book][:author], isbn: [ :book ][:isbn])
+    book.update(title: params[:book][:title], author: params[:book][:author], isbn: params[:book][:isbn])
     redirect_to "/"
   end
 end
